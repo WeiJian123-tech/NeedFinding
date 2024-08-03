@@ -1,33 +1,54 @@
 <!--
-  Special Thanks to:
-  Mozilla JavaScript Maps: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#examples
+    Special thanks to
+
+    Bootstrap Documentation:
+        Navigation Bar: https://getbootstrap.com/docs/5.0/components/navbar/
+        Carousel: https://getbootstrap.com/docs/5.0/components/carousel/#how-it-works
+        Borders: https://getbootstrap.com/docs/5.0/utilities/borders/
+        Grids: https://getbootstrap.com/docs/5.0/layout/grid/
+        Cards: https://getbootstrap.com/docs/5.0/components/card/
+        Text Color: https://getbootstrap.com/docs/5.0/customize/color/
+        Font-size: https://getbootstrap.com/docs/5.0/utilities/text/#font-size
+
+    ChatGPT:
+
+        Prompt:
+            Please generate an example paragraph for an "About" webpage 
+            that explains the reason for building a webpage that informs users Brooklyn College's cafeteria, 
+            partnered food trucks, neighboring food locations, and their menus.
+        
+        Response:
+            Welcome to our comprehensive guide to all things culinary at Brooklyn College! 
+            Our webpage is dedicated to providing students, faculty, and visitors with easy access to essential information about dining options 
+            both on and around campus. Whether you're craving a hearty meal at the college cafeteria, 
+            curious about the latest offerings from our partnered food trucks, or looking to explore nearby dining hotspots, we've got you covered. 
+            Our goal is to ensure that everyone can make informed dining choices by providing detailed menus, hours of operation, and location information. 
+            From delicious campus eats to off-campus delights, 
+            let us be your go-to resource for satisfying your hunger while navigating the bustling food scene of Brooklyn College and its surroundings.
+    
+    Alt-codes.net:
+        Copyright Symbol: https://www.alt-codes.net/copyright_alt_code.php
+
+    
+    Images edited by Photopea: https://www.photopea.com/
 -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu</title>
-    <!--BootStrap-->
+    <title>About</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!--Google Fonts Josefin Sans-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    
-    <!--Custom Stylesheet-->
     <link rel="stylesheet" href="./index.css" />
-    <!--<link rel="stylesheet" href="index.css" />-->
   </head>
 
   <body>
-
     <!--Navigation Bar for website-->
     <nav class="navbar navbar-expand-md">
       <div class="container-xxl">
@@ -35,6 +56,7 @@
           <img src="../img/navimg.png" alt="Mascot Image" height="70px" />
           <h3 class="text-light ">Brooklyn College</h3>
         </a>
+        
         <!--Button For Responsive Design on mobile screens-->
         <button
           class="navbar-toggler"
@@ -69,28 +91,243 @@
     <!--Main section-->
     <main>
       <div>
+        <h1>About</h1>
 
-        <!--Container to store the food location menus-->
-        <div id="menuBtnCont">
+        <p id="aboutTxt">
+          Welcome to this website providing essential information to students,
+          faculty, staff, higher-ups, and visitors about Brooklyn College's food
+          locations and their menu items. Search through this website to
+          discover the various options on and around campus that may assist your
+          dietary needs. From hearty deli sandwiches to halal gyros served by
+          food trucks to Brooklyn College's cafeteria there are many places to
+          acquire delicious food from a few clicks of a mouse. Ensuring that
+          everyone can make informed dining choices providing detailed menus,
+          hours of operation, and location information. May this website be the
+          guide for everyone's Brooklyn College dining experience!
+        </p>
 
-        </div>
+        <!--Carousel with images sliding from right to left-->
 
-        <!--Container to display the title of the chosen food location-->
-        <div id="menuTitleCont">
-
-          <h1 id="menuTitle">Please click a food location button to begin</h1>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide border border-2 border-dark"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
           
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./media/BC-cafe.png"
+                class="d-block w-100"
+                alt="Carousel image of Brooklyn College Dining Hall/Cafeteria."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./media/kinky-tacos.png"
+                class="d-block w-100"
+                alt="Carousel image of Kinky Tacos food truck partnered with Brooklyn College."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./media/waffles.png"
+                class="d-block w-100"
+                alt="Carousel image of Waffles food truck partnered with Brooklyn College."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
 
-        <!--Container to store the text of the menu-->
-        <div id="menuTxtCont">
+        <!--
+            <h2>
+                Socials
+            </h2>
+            -->
 
-          <ol id="menuTxtList">
+        <!--Grid layout of all food truck socials-->
 
-          </ol>
+        <!--
+            <div class="container">
 
+              <div class="row">
+
+                <div class="col-sm-6">
+
+                  <div class="card">
+                    <div class="card-body">
+                      <img src="./media/moshefalafel.png" class="card-img-top" alt="Moshe's Falafel Logo" />
+                      <h5 class="card-title">Moshe's Falafel</h5>
+                      <a href="https://moshesfalafel.net/" class="btn btn-primary">Go to their website</a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-6">
+
+                  <div class="card">
+                    <div class="card-body">
+                      <img src="./media/labraza.png" class="card-img-top" alt="La Braza's Logo" />
+                      <h5 class="card-title">La Braza</h5>
+                      <a href="https://www.facebook.com/LabrazaNY/" class="btn btn-primary">Go their Facebook page</a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-6">
+
+                  <div class="card">
+                    <div class="card-body">
+                      <img src="./media/jiannettospizza.png" class="card-img-top" alt="Jiannettospizza's Logo" />
+                      <h5 class="card-title">Jiannettospizza</h5>
+                      <a href="https://www.jiannettospizza.com/index.php" class="btn btn-primary">Go their website</a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-6">
+
+                  <div class="card">
+                    <div class="card-body">
+                      <img src="./media/wafels.png" class="card-img-top" alt="Wafels's Logo" />
+                      <h5 class="card-title">Wafels</h5>
+                      <a href="hhttps://wafels.com/" class="btn btn-primary">Go their website</a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-6">
+
+                  <div class="card">
+                    <div class="card-body">
+                      <img src="./media/kinkytacos.png" class="card-img-top" alt="Kinky Tacos' Logo" />
+                      <h5 class="card-title">Kinky Tacos</h5>
+                      <a href="https://kinkytacotruck.com/" class="btn btn-primary">Go their website</a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-6">
+
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">tacoselgueronyc</h5>
+                      <a href="https://www.instagram.com/tacoselgueronyc/?hl=en" class="btn btn-primary">Go their Instagram page</a>
+                    </div>
+                  </div>
+
+                </div>
+
+                
+
+              </div>
+
+            </div>
+
+          -->
+
+        <!--Team member GitHub links-->
+
+        <h2>Team</h2>
+
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a href="https://github.com/jjessica415">
+                <img
+                  src="https://avatars.githubusercontent.com/u/111005055?v=4"
+                  alt="Jessica Jiang's GitHub Profile"
+                />
+                <p>Jessica Jiang</p>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="https://github.com/JoMa388">
+                <img
+                  src="https://avatars.githubusercontent.com/u/98840532?v=4"
+                  alt="Jonathan Ma's GitHub Profile"
+                />
+                <p>Jonathan Ma</p>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="https://github.com/VincentChen06">
+                <img
+                  src="https://avatars.githubusercontent.com/u/161735957?v=4"
+                  alt="Vincent Chen's GitHub Profile"
+                />
+                <p>Vincent Chen</p>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="https://github.com/LostSphere">
+                <img
+                  src="https://avatars.githubusercontent.com/u/159456360?v=4"
+                  alt="Wei Cheng Zhu's GitHub Profile"
+                />
+                <p>Wei Cheng Zhu</p>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="https://github.com/WeiJian123-tech">
+                <img
+                  src="https://avatars.githubusercontent.com/u/55195954?v=4"
+                  alt="Wei Jian Zhen's GitHub Profile"
+                />
+                <p>Wei Jian Zhen</p>
+              </a>
+            </div>
+          </div>
         </div>
-
       </div>
     </main>
 
@@ -101,138 +338,11 @@
       <small>All rights reserved to their respective copyright owners.</small>
     </footer>
 
-    <!--
-    <div class="main-container">
-
-      <!--Navigation Bar--> <!--
-      <div class="frame">
-        <div class="frame-1">
-          <div class="bulldog-logo"></div>
-          <span class="brooklyn-college">Brooklyn College</span>
-        </div>
-        <span class="menu">Menu</span>
-        <span class="nutrition">Nutrition</span>
-        <span class="about">About</span>
-      </div>
-
-      <!--
-        Food Location Buttons:
-        Switches menu shown to user when
-        the user clicks one of those buttons.
-      --> <!--
-      <div class="flex-row-e">
-
-        <button class="rectangle">
-          <span class="buona-journata-halal"> <!--All inner span classes have the same css--> <!-- 
-            Buona Journata Halal Food Truck
-          </span>
-        </button>
-
-        <button class="rectangle-2">
-          <span class="kinky-taco">Kinky Taco</span>
-        </button>
-
-        <button class="rectangle-3">
-          <span class="moshes-falafel">Moshe’s Falafel</span>
-        </button>
-
-        <button class="rectangle-4">
-          <span class="jainnettos-pizza">Jainnetto's Pizza</span>
-        </button>
-
-        <button class="rectangle-5">
-          <span class="wafels-dingers">Wafels & Dingers</span>
-        </button>
-        
-      </div>
-
-      <!--Title--> <!--
-      <div class="frame-6">
-        <div class="frame-7">
-          <h1 class="kinky-food-truck">Kinky Food Truck</>
-        </div>
-      </div>
-
-      <!--Images--> <!--
-      <div class="flex-row-a">
-        <div class="image"></div>
-        <div class="image-8"></div>
-        <div class="image-9"></div>
-        <div class="image-a"></div>
-        <div class="image-b"></div>
-      </div>
-
-      <!--Menu Items--> <!--
-      <div class="flex-row">
-        <div class="uncle-fattys-fried-chicken">
-          <span class="uncle-fattys-fried-chicken-c"
-            >Uncle Fatty’s Fried Chicken Tacos<br /></span
-          ><span class="price">$12.99<br /></span>
-        </div>
-        <div class="kinky-loaded-tacos">
-          <span class="kinky-loaded-tacos-d">Kinky Loaded Tacos<br /></span
-          ><span class="price-e">$13.95</span>
-        </div>
-        <div class="saditty-salmon-tacos">
-          <span class="saditty-salmon-tacos-f">Saditty Salmon Tacos<br /></span
-          ><span class="price-10">$15.99</span>
-        </div>
-        <div class="smack-yo-momma-catfish">
-          <span class="smack-yo-momma-catfish-11"
-            >Smack Yo Momma Catfish Taco<br /></span
-          ><span class="price-12">$6.49<br /></span>
-        </div>
-        <div class="back-alley-beef-tacos">
-          <span class="back-alley-beef-tacos-13"
-            >Back Alley Beef Tacos<br /></span
-          ><span class="price-14">$12.99</span>
-        </div>
-      </div>
-
-      <!--Images--> <!--
-      <div class="flex-row-a-15">
-        <div class="image-16"></div>
-        <div class="image-17"></div>
-        <div class="image-18"></div>
-        <div class="image-19"></div>
-        <div class="image-1a"></div>
-      </div>
-
-      <!--Additional Menu Items--> <!--
-      <div class="flex-row-1b">
-        <div class="churro-sundae">
-          <span class="churro-sundae-1c">Churro Sundae<br /></span
-          ><span class="price-1d">$9.99</span>
-        </div>
-        <div class="cajun-fries">
-          <span class="cajun-fries-1e">Cajun Fries<br /></span
-          ><span class="price-tag">$4.99</span>
-        </div>
-        <div class="salmon-tacos">
-          <span class="salmon-tacos-1f">Saditty Salmon Tacos<br /></span
-          ><span class="price-tag-20">$15.99<br /></span>
-        </div>
-        <div class="chips">
-          <span class="chips-21">Chips<br /></span
-          ><span class="price-tag-22">$3.99</span>
-        </div>
-        <div class="churros">
-          <span class="churros-23">2 Churros<br /></span
-          ><span class="price-tag-24">$5.99</span>
-        </div>
-      </div>
-
-      <span class="price-note">Note: Prices may vary.</span>
-
-    </div>
-    -->
-
-    <script src="./index.js" async /> 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
   </body>
-  
 </html>
+
